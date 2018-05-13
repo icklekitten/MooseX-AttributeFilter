@@ -64,7 +64,11 @@ MooseX::AttributeFilter - MooX::AttributeFilter with cute antlers OwO
 
 =head1 DESCRIPTION
 
-MooseX::AttributeFilter is ...
+MooseX::AttributeFilter is a port of L<MooX::AttributeFilter> to Moose.
+
+Some parts don't work correctly in mutable classes.
+
+Use with roles is untested so far.
 
 =head1 LICENSE
 

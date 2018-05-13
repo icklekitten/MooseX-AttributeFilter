@@ -42,17 +42,33 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008001"
+            "Moose" : "2.0800",
+            "perl" : "5.008009"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.98"
+            "Test2::V0" : "0",
+            "Test::Moose" : "0"
          }
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/icklekitten/MooseX-AttributeFilter/issues"
+      },
+      "homepage" : "https://github.com/icklekitten/MooseX-AttributeFilter",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/icklekitten/MooseX-AttributeFilter.git",
+         "web" : "https://github.com/icklekitten/MooseX-AttributeFilter"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:KITTEN",
+   "x_contributors" : [
+      "Little Princess Kitten <39091153+icklekitten@users.noreply.github.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27400_02"
 }
