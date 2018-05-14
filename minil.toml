@@ -1,6 +1,5 @@
 name = "MooseX-AttributeFilter"
-# badges = ["travis"]
 authority="cpan:KITTEN"
-
 module_maker="ModuleBuildTiny"
+no_github_issues=true
 
