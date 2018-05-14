@@ -68,9 +68,13 @@ Boolean.
 
 =back
 
+=head1 SEE ALSO
+
+L<MooseX::AttributeFilter>.
+
 =head1 LICENSE
 
-Copyright (C) Little Princess Kitten <3.
+Copyright (C) 2018 Little Princess Kitten <3.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

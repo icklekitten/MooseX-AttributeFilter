@@ -64,14 +64,38 @@ MooseX::AttributeFilter - MooX::AttributeFilter with cute antlers OwO
 
 =head1 DESCRIPTION
 
-MooseX::AttributeFilter is a port of L<MooX::AttributeFilter> to Moose.
+MooseX::AttributeFilter is a port of L<MooX::AttributeFilter> to L<Moose>.
 
-Some parts don't work correctly in mutable classes.
-Mutable classes are slow anyway.
+Filter is like a C<coerce> sub but is called as a method so can see object instance.
+
+Filter is like a C<trigger> but is called before attribute value is set.
+
+=head1 BUGS
+
+Some parts don't work correctly in mutable classes. Mutable classes are slow anyway.
+
+L<https://rt.cpan.org/Dist/Display.html?Queue=MooseX-AttributeFilter>
+
+=head1 CUTE
+
+=begin html
+
+<img height="680" width="500" src="https://data.whicdn.com/images/129435330/large.jpg" alt="cute kitty girl" />
+
+=end html
+
+Cute.
+
+=head1 SEE ALSO
+
+L<MooX::AttributeFilter>, L<Moose>.
+
+L<MooseX::AttributeFilter::Trait::Attribute>,
+L<MooseX::AttributeFilter::Trait::Attribute::Role>.
 
 =head1 LICENSE
 
-Copyright (C) Little Princess Kitten <3.
+Copyright (C) 2018 Little Princess Kitten <3.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
