@@ -1,5 +1,9 @@
 Revision history for Perl extension MooseX-AttributeFilter
 
+0.06
+
+    - fix NAME for MooseX::AttributeFilter::Trait::Attribute::Role docs
+
 0.05
 
     - better docs
