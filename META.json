@@ -55,9 +55,6 @@
    },
    "release_status" : "unstable",
    "resources" : {
-      "bugtracker" : {
-         "web" : "https://github.com/icklekitten/MooseX-AttributeFilter/issues"
-      },
       "homepage" : "https://github.com/icklekitten/MooseX-AttributeFilter",
       "repository" : {
          "type" : "git",
