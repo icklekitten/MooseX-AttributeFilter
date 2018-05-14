@@ -62,7 +62,7 @@
          "web" : "https://github.com/icklekitten/MooseX-AttributeFilter"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_authority" : "cpan:KITTEN",
    "x_contributors" : [
       "Little Princess Kitten <39091153+icklekitten@users.noreply.github.com>"
