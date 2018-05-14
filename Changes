@@ -1,5 +1,9 @@
 Revision history for Perl extension MooseX-AttributeFilter
 
+0.03
+
+    - bump required Moose version even more D:
+
 0.02
 
     - bump required Moose version
