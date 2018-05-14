@@ -154,4 +154,68 @@ around _inline_init_from_default => sub {
 };
 
 1;
+__END__
+
+=encoding utf-8
+
+=head1 NAME
+
+MooseX::AttributeFilter::Trait::Attribute - trait for filtered attributes
+
+=head1 SYNOPSIS
+
+    package My::Class;
+    use Moose;
+    use MooseX::AttributeFilter;
+    
+    has field => (
+        is     => 'rw',
+        filter => 'filterField',
+    );
+    
+    sub filterField {
+        my $this = shift;
+        return "filtered($_[0])";
+    }
+    
+    package main;
+    My::Class->meta->get_attribute("field")->has_filter;  # true
+
+=head1 DESCRIPTION
+
+MooseX::AttributeFilter::Trait::Attribute is a trait for L<Moose::Meta::Attribute>.
+L<MooseX::AttributeFilter> automatically applies it to all attributes, but it
+acts as no-op if attribute does not use C<filter> option.
+
+=head2 Methods
+
+=over
+
+=item C<filter>
+
+Returns the value of the C<filter> option. This may be a string (method name)
+or coderef or undef.
+
+=item C<has_filter>
+
+Boolean.
+
+=back
+
+=head1 LICENSE
+
+Copyright (C) Little Princess Kitten <3.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+KITTEN
+
+L<https://metacpan.org/author/KITTEN>
+
+L<https://github.com/icklekitten>
+
+=cut
 
