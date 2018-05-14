@@ -1,5 +1,5 @@
 requires 'perl', '5.008009';
-requires 'Moose', '2.0800';
+requires 'Moose', '2.1200';
 
 on 'test' => sub {
     requires 'Test2::V0';
