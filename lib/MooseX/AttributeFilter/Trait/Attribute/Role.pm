@@ -74,18 +74,20 @@ L<MooseX::AttributeFilter>.
 
 =head1 LICENSE
 
-Copyright (C) 2018 Little Princess Kitten <3.
+Copyright (C) 2018 Little Princess Kitten <kitten@cpan.org>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-KITTEN
+KITTEN <kitten@cpan.org>
 
 L<https://metacpan.org/author/KITTEN>
 
 L<https://github.com/icklekitten>
+
+<3
 
 =cut
 
