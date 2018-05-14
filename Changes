@@ -1,5 +1,12 @@
 Revision history for Perl extension MooseX-AttributeFilter
 
+0.04
+
+    - tests for filtered attributes in roles
+    - tests for meta
+    - documentation for meta
+    - ily
+
 0.03
 
     - bump required Moose version even more D:
