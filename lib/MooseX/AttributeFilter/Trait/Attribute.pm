@@ -1,5 +1,5 @@
 package MooseX::AttributeFilter::Trait::Attribute;
-use 5.008001;
+use 5.008009;
 use strict;
 use warnings;
 
