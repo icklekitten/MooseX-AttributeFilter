@@ -21,7 +21,7 @@ __END__
 
 =head1 NAME
 
-MooseX::AttributeFilter::Trait::Attribute - trait for filtered attributes in roles
+MooseX::AttributeFilter::Trait::Attribute::Role - trait for filtered attributes in roles
 
 =head1 SYNOPSIS
 
