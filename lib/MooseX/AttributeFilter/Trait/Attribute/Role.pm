@@ -10,6 +10,7 @@ use Moose::Role;
 has filter => (
     is  => 'ro',
     isa => 'CodeRef|Str',
+    predicate => 'has_filter',
 );
 
 1;
