@@ -13,6 +13,12 @@ has filter => (
     predicate => 'has_filter',
 );
 
+has bypass_filter_method_check => (
+    is  => 'ro',
+    isa => 'Bool',
+    default => 0,
+);
+
 after _process_options => sub {
     my $this = shift;
     my ($name, $options) = @_;
@@ -26,6 +32,7 @@ after _process_options => sub {
 
 before install_accessors => sub {
     my $this = shift;
+    return if $this->bypass_filter_method_check;
     my $filter = $this->filter;
     if (defined $filter and not ref $filter) {
         my $class  = $this->associated_class;
@@ -206,6 +213,21 @@ or coderef or undef.
 =item C<has_filter>
 
 Boolean.
+
+=item C<bypass_filter_method_check>
+
+Boolean.
+
+    has attr => (
+        is      => 'rw',
+        filter  => 'my_filter_method',
+        bypass_filter_method_check => 1,
+    );
+
+Can be used to make MooseX::AttributeFilter::Trait::Attribute not throw
+error message in case of C<my_filter_method> method not exists. (Will still
+throw error if is called and cannot find method.) Used for edge cases like
+when filter method will be provided by C<AUTOLOAD> or later added by trait.
 
 =back
 

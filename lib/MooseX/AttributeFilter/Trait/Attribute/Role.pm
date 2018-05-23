@@ -13,6 +13,12 @@ has filter => (
     predicate => 'has_filter',
 );
 
+has bypass_filter_method_check => (
+    is  => 'ro',
+    isa => 'Bool',
+    default => 0,
+);
+
 1;
 
 __END__
@@ -63,6 +69,10 @@ Returns the value of the C<filter> option. This may be a string (method name)
 or coderef or undef.
 
 =item C<has_filter>
+
+Boolean.
+
+=item C<bypass_filter_method_check>
 
 Boolean.
 
