@@ -62,7 +62,7 @@
          "web" : "https://github.com/icklekitten/MooseX-AttributeFilter"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_authority" : "cpan:KITTEN",
    "x_serialization_backend" : "JSON::PP version 2.27400_02"
 }
