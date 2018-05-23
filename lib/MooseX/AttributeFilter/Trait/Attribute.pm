@@ -21,7 +21,7 @@ after _process_options => sub {
     
     if ($options->{filter} eq '1') {
         $options->{filter} = "_filter_${name}";
-    }    
+    }
 };
 
 before install_accessors => sub {
@@ -29,7 +29,12 @@ before install_accessors => sub {
     my $filter = $this->filter;
     if (defined $filter and not ref $filter) {
         my $class  = $this->associated_class;
-        my $method = $class->find_method_by_name($filter);
+        my $method = $class->find_method_by_name($filter)
+            || $class->name->can($filter)
+            || eval {
+                no strict 'refs';
+                \&{ $class->name . "::" . $filter };
+            };
         
         die sprintf(
             "No filter method '%s' defined for %s attribute '%s'",
