@@ -3,7 +3,7 @@ use 5.008009;
 use strict;
 use warnings;
 
-our $VERSION = "0.06";
+our $VERSION = "0.07";
 
 use Moose::Role;
 
@@ -33,7 +33,9 @@ before install_accessors => sub {
             || $class->name->can($filter)
             || eval {
                 no strict 'refs';
-                \&{ $class->name . "::" . $filter };
+                exists &{ $class->name . "::" . $filter }
+                    ? \&{ $class->name . "::" . $filter }
+                    : undef;
             };
         
         die sprintf(

@@ -3,7 +3,7 @@ use 5.008009;
 use strict;
 use warnings;
 
-our $VERSION = "0.06";
+our $VERSION = "0.07";
 
 use Moose ();
 use Moose::Exporter;
