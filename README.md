@@ -26,9 +26,18 @@ MooseX::AttributeFilter - MooX::AttributeFilter with cute antlers OwO
 
 MooseX::AttributeFilter is a port of [MooX::AttributeFilter](https://metacpan.org/pod/MooX::AttributeFilter) to [Moose](https://metacpan.org/pod/Moose).
 
-Filter is like a `coerce` sub but is called as a method so can see object instance.
+A filter a method that is called before an attribute value is set (by accessor
+or constructor). It is called before coercions, type checks, and triggers.
 
-Filter is like a `trigger` but is called before attribute value is set.
+It is called as a method (so receives the object) with the new attribute value
+as its first parameter, and the old attribute value as the second parameter.
+(When called from constructor, no old value, so only one parameter.) Its return
+value is used as the attribute value.
+
+It is even called when an attribute value is build by builder methods or
+defaults.
+
+See [MooX::AttributeFilter](https://metacpan.org/pod/MooX::AttributeFilter) for more details and for use cases.
 
 # BUGS
 
